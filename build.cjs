@@ -133,7 +133,7 @@ const script = `
     const ms = END - Date.now();
     if (ms <= 0) { document.getElementById('app').innerHTML = gone; const f = document.getElementById('fab'); if (f) f.remove(); return false; }
     const h = Math.floor(ms / 3600000), m = Math.floor(ms % 3600000 / 60000);
-    document.getElementById('left').textContent = ' · queden ' + (h ? h + ' h ' : '') + m + ' min';
+    document.getElementById('left').textContent = ' · ' + (h ? h + ' h ' : '') + m + ' min';
     return true;
   };
   if (!tick()) return;
